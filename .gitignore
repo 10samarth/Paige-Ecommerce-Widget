@@ -1,0 +1,17 @@
+# Ignore node modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment variables
+.env
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
