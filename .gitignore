@@ -15,3 +15,7 @@ node_modules/
 
 # misc
 .DS_Store
+/.angular/cache
+
+# Visual Studio Code
+.vscode/*
