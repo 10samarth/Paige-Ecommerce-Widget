@@ -1,0 +1,126 @@
+$btn-text: #fff;
+$btn-hover: #000000;
+$btn-color: #2c2c2c;
+$btn-danger: #e5293c;
+$btn-danger-hover: #b02230;
+$disabled-color: #ccc;
+$btn-page: #0c6dfd;
+
+$th-color: #ddd;
+$td-color: #ddd;
+$tbody-background-hover: #f7f7f7;
+$thead-background: #ccc;
+
+$font-family: 'Josefin Sans', sans-serif;
+
+h1,
+h2,
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: $font-family;
+  padding-bottom: 10px;
+}
+
+.card {
+  margin: 15px;
+  padding: 25px;
+  border-radius: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: $font-family;
+
+}
+
+thead {
+  background-color: $thead-background;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid $th-color;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid $td-color;
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: $tbody-background-hover;
+    }
+  }
+}
+
+a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: $btn-color;
+  color: $btn-text;
+  border-radius: 1px;
+  text-decoration: none;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: $btn-hover;
+    color: $btn-text;
+  }
+}
+
+.btn-action {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: $btn-color;
+  color: $btn-text;
+  border-radius: 1px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: $btn-hover;
+    color: $btn-text;
+  }
+}
+
+.btn-danger {
+  padding: 5px 10px;
+  background-color: $btn-danger;
+  color: $btn-text;
+  border: none;
+  border-radius: 1px;
+
+  &:hover {
+    background-color: $btn-danger-hover;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.page-link {
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: $disabled-color;
+  }
+
+  &:hover {
+    background-color: $btn-page;
+    color: $btn-text;
+  }
+
+  &:active {
+    background-color: $btn-page;
+    color: $btn-text;
+  }
+}

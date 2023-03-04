@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="form-group">
+    <h1>Product List</h1>
+    <label for="color-filter">Filter by color:</label>
+    <ng-multiselect-dropdown [placeholder]="'Filter by color'" [settings]="dropdownSettings" [data]="colors"
+      [(ngModel)]="selectedColors" (onSelect)="productList">
+    </ng-multiselect-dropdown>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Type</th>
+        <th>Cost</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td>{{ product.name }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ product.type }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <button routerLink="/product-detail/{{ product.sku }}" class="btn btn-action">Edit</button>
+          <button (click)="deleteProduct(product.sku)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div aria-label="Product navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="currentPage = 1">First</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="currentPage = currentPage - 1">&lt;&lt;</a>
+      </li>
+      <li class="page-item" [class.active]="i + 1 === currentPage" *ngFor="let page of pages; let i = index">
+        <a class="page-link" (click)="currentPage = i + 1">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === pages.length">
+        <a class="page-link" (click)="currentPage = currentPage + 1">&gt;&gt;</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === pages.length">
+        <a class="page-link" (click)="currentPage = pages.length">Last</a>
+      </li>
+    </ul>
+  </div>
+
+</div>

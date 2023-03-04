@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  express:
+    container_name: express-backend
+    build: ./backend
+    ports:
+      - "3000:3000"
+
+  angular:
+    container_name: angular-frontend
+    build: ./frontend/paige-ecommerce-widget
+    ports:
+      - "8009:80"

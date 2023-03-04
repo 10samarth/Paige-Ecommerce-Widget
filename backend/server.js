@@ -43,7 +43,7 @@ app.get('/api/products/:sku', (req, res) => {
   });
   
   
-  // Update a product by SKU
+// Update a product by SKU
 app.put('/api/products/:sku', (req, res) => {
     const productSku = req.params.sku;
     const updatedProductData = req.body;
@@ -75,7 +75,7 @@ app.put('/api/products/:sku', (req, res) => {
     });
   });
   
-  // Delete a product by SKU
+// Delete a product by SKU
 app.delete('/api/products/:sku', (req, res) => {
     const productSku = req.params.sku;
   
@@ -103,7 +103,7 @@ app.delete('/api/products/:sku', (req, res) => {
     });
   });
 
-const port = 3001;
+const port = 3000;
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);

@@ -1,0 +1,23 @@
+$navbar-background-color: #fff;
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+	background-color: $navbar-background-color;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	margin-top: 10px;
+	height: 50px;
+	padding: 10px;
+	img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
