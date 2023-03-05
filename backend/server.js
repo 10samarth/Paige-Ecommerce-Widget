@@ -47,9 +47,6 @@ app.get('/api/products/:sku', (req, res) => {
 app.put('/api/products/:sku', (req, res) => {
     const productSku = req.params.sku;
     const updatedProductData = req.body;
-  
-    console.log("req:",req.params)
-    console.log("req.body:",req.body)
 
     fs.readFile(filepath, (err, data) => {
       if (err) {
