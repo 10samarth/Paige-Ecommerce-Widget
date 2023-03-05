@@ -38,9 +38,10 @@ To get started follow these steps:
 Alternatively, you can also start the project without Docker by following these steps:
 
 1.  Clone the repository to your local machine using git clone.
-2.  Navigate to the backend directory and run npm install to install the necessary dependencies.
+2.  Navigate to the backend directory and run `npm install` to install the necessary dependencies.
 3.  Start the backend server by running command `node server.js`.
-4.  Navigate to the frontend directory (frontend/paige-ecommerce-widget) and run npm install to install the required dependencies.
+4.  Navigate to the frontend directory (frontend/paige-ecommerce-widget) and run `npm install` to install the required dependencies.
+5.  Install the Angular CLI globally if not installed by running the command `npm install -g @angular/cli`
 5.  Start the frontend server by running command `ng serve`.
 6.  Open your browser and navigate to `http://localhost:4200/` to view the application.
 

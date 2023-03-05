@@ -1,6 +1,11 @@
 <div class="card">
   <div class="form-group">
     <h1>Product List</h1>
+
+    <div *ngIf="errorMessage" class="invalid-feedback">
+      <p>{{ errorMessage }}</p>
+    </div>
+    
     <label for="color-filter">Filter by color:</label>
     <ng-multiselect-dropdown [placeholder]="'Filter by color'" [settings]="dropdownSettings" [data]="colors"
       [(ngModel)]="selectedColors" (onSelect)="productList">

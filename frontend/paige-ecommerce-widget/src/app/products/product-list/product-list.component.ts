@@ -11,6 +11,7 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
   selectedColors: string[] = [];
   colors: string[] = [];
+  errorMessage: string = '';
 
   dropdownSettings = {};
 
@@ -28,6 +29,10 @@ export class ProductListComponent implements OnInit {
         product.color.toLowerCase()
       );
       this.colors = Array.from(new Set(result));
+    },
+    (error: any) => {
+      this.errorMessage = error.message;
+      console.log(this.errorMessage)
     });
 
     this.dropdownSettings = {
@@ -45,6 +50,9 @@ export class ProductListComponent implements OnInit {
       this.filteredProducts = this.filteredProducts.filter(
         (p) => p.sku !== sku
       );
+    },
+    (error: any) => {
+      this.errorMessage = error.message;
     });
   }
 

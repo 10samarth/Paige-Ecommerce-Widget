@@ -3,6 +3,7 @@ $btn-hover: #000000;
 $btn-color: #2c2c2c;
 $btn-danger: #e5293c;
 $btn-danger-hover: #b02230;
+$validation-color: #d0021b;
 $disabled-color: #ccc;
 $btn-page: #0c6dfd;
 
@@ -123,4 +124,14 @@ nav {
     background-color: $btn-page;
     color: $btn-text;
   }
+}
+
+.invalid-feedback {
+	display: block;
+	width: 100%;
+	margin-top: 0.25rem;
+	font-size: 80%;
+	font-style: normal;
+	color: $validation-color;
+	font-family: $font-family;
 }
